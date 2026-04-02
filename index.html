@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevFolio Pro</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #94a3b8;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* Projects */
+.project {
+  background: #1e293b;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* Contact */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  margin-top: 20px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h3>DevFolio</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Your Name</h1>
+  <p>Frontend Developer | HTML CSS JS</p>
+</div>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>Write about yourself here. Skills, experience, and goals.</p>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Project Title</h3>
+    <p>Short project description.</p>
+  </div>
+
+  <div class="project">
+    <h3>Project Title</h3>
+    <p>Short project description.</p>
+  </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Message"></textarea>
+  <button onclick="sendMessage()">Send</button>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Your Name</p>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Fake message function
+function sendMessage(){
+  alert("Message sent (demo)");
+}
+</script>
+
+</body>
+</html>
